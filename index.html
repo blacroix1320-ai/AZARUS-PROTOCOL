@@ -1844,7 +1844,11 @@
   // SMOOTH SCROLL
   function scrollToSection(id) {
     const el = document.getElementById(id);
-    if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if(el) {
+      const offset = 70;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
   }
 
   // MOBILE MENU
