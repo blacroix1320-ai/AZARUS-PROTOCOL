@@ -2,6 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8"/>
+  <meta property="og:title" content="AZARUS PROTOCOL — Formation Trading"/>
+  <meta property="og:description" content="Apprends à trader comme les institutionnels. Price Action, Smart Money Concepts — 2 niveaux de formation."/>
+  <meta property="og:image" content="https://azarus-protocol-plum.vercel.app/og-image.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://azarus-protocol-plum.vercel.app/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="AZARUS PROTOCOL — Formation Trading"/>
+  <meta name="twitter:description" content="Apprends à trader comme les institutionnels."/>
+  <meta name="twitter:image" content="https://azarus-protocol-plum.vercel.app/og-image.png"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>AZARUS PROTOCOL — Formation Trading</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -416,6 +425,19 @@
     @media(hover:none){
       .cur, .cur2 { display:none !important; }
     }
+
+
+    /* STATS SECTION */
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,168,76,.08); margin-top:48px; }
+    .stat-block { background:#0A0C09; padding:36px 24px; text-align:center; position:relative; overflow:hidden; transition:background .3s; }
+    .stat-block:hover { background:#0E110D; }
+    .stat-block::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:40px; height:1px; background:var(--gold); opacity:0; transition:opacity .3s; }
+    .stat-block:hover::before { opacity:1; }
+    .stat-num { font-family:'Syne',sans-serif; font-weight:800; font-size:2.8rem; line-height:1; letter-spacing:-.02em; margin-bottom:8px; }
+    .stat-num.gold { color:var(--gold2); }
+    .stat-num.green { color:#4DC880; }
+    .stat-lbl { font-size:.68rem; letter-spacing:.14em; color:var(--muted); text-transform:uppercase; line-height:1.5; }
+    @media(max-width:768px){ .stats-grid { grid-template-columns:1fr 1fr; } .stat-num { font-size:2.2rem; } .stat-block { padding:28px 16px; } }
 
     /* ── BEETLE THEME ── */
     .beetle-divider { display:flex; align-items:center; justify-content:center; gap:16px; padding:8px 6vw; position:relative; z-index:2; }
@@ -1167,6 +1189,34 @@
   <p class="perf-disclaimer"><span class="mod-text" data-fr="* Résultats à titre indicatif. Les performances passées ne garantissent pas les résultats futurs." data-en="* Results for illustrative purposes only. Past performance does not guarantee future results.">* Résultats à titre indicatif. Les performances passées ne garantissent pas les résultats futurs.</span></p>
 </section>
 
+<div class="beetle-divider"><span class="beetle-icon">𓆣</span></div>
+
+
+<!-- STATS -->
+<section id="stats" style="padding:80px 6vw;background:#080A07;">
+  <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
+    <div class="section-tag">En chiffres</div>
+    <h2>Les <em>résultats</em> parlent</h2>
+  </div>
+  <div class="stats-grid reveal">
+    <div class="stat-block">
+      <div class="stat-num gold count-up" data-target="8" data-suffix=" ans">8 ans</div>
+      <div class="stat-lbl">D'expérience<br/>en trading actif</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num green"><span class="count-up" data-target="73" data-suffix="%">73%</span></div>
+      <div class="stat-lbl">Taux de trades<br/>gagnants</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num gold count-up" data-target="33" data-suffix="">33</div>
+      <div class="stat-lbl">Membres actifs<br/>dans la communauté</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num green"><span class="count-up" data-target="4" data-suffix=" marchés">4 marchés</span></div>
+      <div class="stat-lbl">Forex · Crypto<br/>Indices · Or</div>
+    </div>
+  </div>
+</section>
 <div class="beetle-divider"><span class="beetle-icon">𓆣</span></div>
 
 <!-- FAQ -->
