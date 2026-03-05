@@ -434,10 +434,13 @@
     .stat-block::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:40px; height:1px; background:var(--gold); opacity:0; transition:opacity .3s; }
     .stat-block:hover::before { opacity:1; }
     .stat-num { font-family:'Syne',sans-serif; font-weight:800; font-size:2.8rem; line-height:1; letter-spacing:-.02em; margin-bottom:8px; }
+    .stat-marches { font-family:'Syne',sans-serif; font-weight:700; font-size:1.05rem; display:block; margin-top:6px; letter-spacing:.1em; text-transform:uppercase; color:#4DC880; opacity:.85; }
     .stat-num.gold { color:var(--gold2); }
     .stat-num.green { color:#4DC880; }
     .stat-lbl { font-size:.68rem; letter-spacing:.14em; color:var(--muted); text-transform:uppercase; line-height:1.5; }
-    @media(max-width:768px){ .stats-grid { grid-template-columns:1fr 1fr; } .stat-num { font-size:2.2rem; } .stat-block { padding:28px 16px; } }
+    @media(max-width:768px){ .stats-grid { grid-template-columns:1fr 1fr; } .stat-num { font-size:2.2rem; } .stat-block { padding:28px 16px; min-height:130px; display:flex; flex-direction:column; align-items:center; justify-content:center; } .stat-marches { font-size:.75rem; letter-spacing:.06em; } }
+    @media(max-width:380px){ .stat-num { font-size:1.8rem; } .stat-marches { font-size:.65rem; } .stat-lbl { font-size:.58rem; } }
+    @media(max-width:600px){ #toolkit [style*="grid-template-columns"] { grid-template-columns:1fr !important; } #toolkit [style*="padding:36px 40px"] { flex-direction:column; align-items:flex-start; } #toolkit [style*="align-items:flex-end"] { align-items:flex-start !important; width:100%; } #toolkit-btn { width:100%; text-align:center; box-sizing:border-box; } }
 
     /* ── BEETLE THEME ── */
     .beetle-divider { display:flex; align-items:center; justify-content:center; gap:16px; padding:8px 6vw; position:relative; z-index:2; }
@@ -990,6 +993,71 @@
 
 <div class="beetle-divider"><span class="beetle-icon">𓆣</span></div>
 
+<!-- AZARUS TOOLKIT -->
+<section id="toolkit" style="padding:90px 6vw;background:linear-gradient(180deg,#080A07 0%,#0A0C09 100%);">
+  <div class="reveal" style="text-align:center;max-width:620px;margin:0 auto 60px;">
+    <div class="section-tag" id="toolkit-tag">Les outils</div>
+    <h2 id="toolkit-h2">AZARUS <em>Toolkit</em></h2>
+    <p class="section-sub" id="toolkit-sub" style="text-align:center;margin:0 auto;">4 indicateurs exclusifs TradingView conçus pour appliquer la méthode AZARUS directement sur tes graphiques.</p>
+  </div>
+
+  <div style="max-width:960px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px;margin-bottom:40px;">
+
+      <div class="reveal" style="background:var(--card);border:1px solid rgba(201,168,76,.14);padding:28px 32px;display:flex;gap:20px;align-items:flex-start;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(201,168,76,.35)'" onmouseout="this.style.borderColor='rgba(201,168,76,.14)'">
+        <div style="width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🕐</div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:8px;">FX Market Sessions</div>
+          <div class="mod-text" data-fr="Visualise les sessions de trading (Londres, New York, Asie) directement sur le graphique pour trader aux moments de liquidité optimale." data-en="Visualize trading sessions (London, New York, Asia) directly on your chart to trade at peak liquidity windows." style="font-size:.83rem;color:var(--muted);line-height:1.6;">Visualise les sessions de trading (Londres, New York, Asie) directement sur le graphique pour trader aux moments de liquidité optimale.</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="background:var(--card);border:1px solid rgba(201,168,76,.14);padding:28px 32px;display:flex;gap:20px;align-items:flex-start;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(201,168,76,.35)'" onmouseout="this.style.borderColor='rgba(201,168,76,.14)'">
+        <div style="width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,rgba(39,163,95,.15),rgba(39,163,95,.05));border:1px solid rgba(39,163,95,.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🧠</div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:8px;">Smart Money Concepts</div>
+          <div class="mod-text" data-fr="Identifie automatiquement les Order Blocks, Fair Value Gaps et zones de liquidité clés pour anticiper les mouvements institutionnels." data-en="Automatically identifies Order Blocks, Fair Value Gaps and key liquidity zones to anticipate institutional moves." style="font-size:.83rem;color:var(--muted);line-height:1.6;">Identifie automatiquement les Order Blocks, Fair Value Gaps et zones de liquidité clés pour anticiper les mouvements institutionnels.</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2" style="background:var(--card);border:1px solid rgba(201,168,76,.14);padding:28px 32px;display:flex;gap:20px;align-items:flex-start;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(201,168,76,.35)'" onmouseout="this.style.borderColor='rgba(201,168,76,.14)'">
+        <div style="width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📊</div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:8px;">Smarter SNR</div>
+          <div class="mod-text" data-fr="Détecte et trace automatiquement les niveaux de support et résistance les plus significatifs pour ne jamais manquer une zone clé." data-en="Automatically detects and plots the most significant support and resistance levels so you never miss a key zone." style="font-size:.83rem;color:var(--muted);line-height:1.6;">Détecte et trace automatiquement les niveaux de support et résistance les plus significatifs pour ne jamais manquer une zone clé.</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-3" style="background:var(--card);border:1px solid rgba(201,168,76,.14);padding:28px 32px;display:flex;gap:20px;align-items:flex-start;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(201,168,76,.35)'" onmouseout="this.style.borderColor='rgba(201,168,76,.14)'">
+        <div style="width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,rgba(39,163,95,.15),rgba(39,163,95,.05));border:1px solid rgba(39,163,95,.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎯</div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:8px;">Trendline Breakouts with Target</div>
+          <div class="mod-text" data-fr="Détecte les cassures de ligne de tendance et projette automatiquement la cible de prix pour une gestion optimale des trades." data-en="Detects trendline breakouts and automatically projects the price target for optimal trade management." style="font-size:.83rem;color:var(--muted);line-height:1.6;">Détecte les cassures de ligne de tendance et projette automatiquement la cible de prix pour une gestion optimale des trades.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Price + CTA -->
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(39,163,95,.04));border:1px solid rgba(201,168,76,.28);padding:36px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--gold2);text-transform:uppercase;margin-bottom:10px;" id="toolkit-pack-label">Pack complet · 4 indicateurs TradingView</div>
+        <div style="display:flex;align-items:baseline;gap:12px;">
+          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:2.4rem;color:var(--gold2);">1 200$</span>
+          <span style="font-size:.9rem;color:var(--muted);">CAD</span>
+        </div>
+        <div style="font-size:.8rem;color:var(--muted);margin-top:6px;" id="toolkit-pack-note">Accès à vie · Mises à jour incluses · Support via Discord</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+        <a href="https://discord.gg/azarus" target="_blank" style="font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;padding:16px 36px;background:var(--gold);color:#0A0C09;text-decoration:none;text-transform:uppercase;transition:all .2s;display:inline-block;" onmouseover="this.style.background='var(--gold2)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='translateY(0)'" id="toolkit-btn">Obtenir le Toolkit</a>
+        <div style="font-size:.74rem;color:var(--muted);text-align:right;" id="toolkit-platform">Exclusif TradingView · by RxchOffplayz</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="beetle-divider"><span class="beetle-icon">𓆣</span></div>
+
 <!-- WHAT YOU LEARN TABS -->
 <section id="learn">
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
@@ -1195,25 +1263,25 @@
 <!-- STATS -->
 <section id="stats" style="padding:80px 6vw;background:#080A07;">
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
-    <div class="section-tag">En chiffres</div>
-    <h2>Les <em>résultats</em> parlent</h2>
+    <div class="section-tag" id="stats-tag">En chiffres</div>
+    <h2 id="stats-h2">Les <em>résultats</em> parlent</h2>
   </div>
   <div class="stats-grid reveal">
     <div class="stat-block">
-      <div class="stat-num gold count-up" data-target="8" data-suffix=" ans">8 ans</div>
-      <div class="stat-lbl">D'expérience<br/>en trading actif</div>
+      <div class="stat-num gold"><span class="count-up" data-target="8" data-suffix="">8</span><span class="mod-text" data-fr=" ans" data-en=" yrs"> ans</span></div>
+      <div class="stat-lbl"><span class="mod-text" data-fr="D'expérience<br/>en trading actif" data-en="Of experience<br/>in active trading">D'expérience<br/>en trading actif</span></div>
     </div>
     <div class="stat-block">
       <div class="stat-num green"><span class="count-up" data-target="73" data-suffix="%">73%</span></div>
-      <div class="stat-lbl">Taux de trades<br/>gagnants</div>
+      <div class="stat-lbl"><span class="mod-text" data-fr="Taux de trades<br/>gagnants" data-en="Winning trade<br/>rate">Taux de trades<br/>gagnants</span></div>
     </div>
     <div class="stat-block">
       <div class="stat-num gold count-up" data-target="33" data-suffix="">33</div>
-      <div class="stat-lbl">Membres actifs<br/>dans la communauté</div>
+      <div class="stat-lbl"><span class="mod-text" data-fr="Membres actifs<br/>dans la communauté" data-en="Active members<br/>in the community">Membres actifs<br/>dans la communauté</span></div>
     </div>
     <div class="stat-block">
-      <div class="stat-num green"><span class="count-up" data-target="4" data-suffix=" marchés">4 marchés</span></div>
-      <div class="stat-lbl">Forex · Crypto<br/>Indices · Or</div>
+      <div class="stat-num green"><span class="count-up" data-target="4" data-suffix="">4</span><span class="stat-marches mod-text" data-fr=" marchés" data-en=" markets"> marchés</span></div>
+      <div class="stat-lbl"><span class="mod-text" data-fr="Forex · Crypto<br/>Indices · Or" data-en="Forex · Crypto<br/>Indicators · Gold">Forex · Crypto<br/>Indices · Or</span></div>
     </div>
   </div>
 </section>
@@ -1454,6 +1522,8 @@
       "bundle-btn":     "Obtenir le Bundle",
       "learn-tag":      "Le programme",
       "learn-h2":       "Ce que tu vas <em>vraiment</em> ma\u00eetriser",
+      "stats-tag":      "En chiffres",
+      "stats-h2":       "Les <em>r\u00e9sultats</em> parlent",
       "tab-beg":        "Formation D\u00e9butante",
       "tab-adv":        "Formation Avanc\u00e9e",
       "about-tag":      "Le formateur",
@@ -1523,7 +1593,14 @@
       // Perfs
       "perfs-tag":  "R\u00e9sultats r\u00e9cents",
       "perfs-h2":   "Quelques <em>trades ferm\u00e9s</em>",
-      "perfs-sub":  "Des exemples de setups r\u00e9els sur les march\u00e9s couverts dans les formations."
+      "perfs-sub":  "Des exemples de setups r\u00e9els sur les march\u00e9s couverts dans les formations.",
+      "toolkit-tag":        "Les outils",
+      "toolkit-h2":         "AZARUS <em>Toolkit</em>",
+      "toolkit-sub":        "4 indicateurs exclusifs TradingView conçus pour appliquer la méthode AZARUS directement sur tes graphiques.",
+      "toolkit-pack-label": "Pack complet · 4 indicateurs TradingView",
+      "toolkit-pack-note":  "Accès à vie · Mises à jour incluses · Support via Discord",
+      "toolkit-btn":        "Obtenir le Toolkit",
+      "toolkit-platform":   "Exclusif TradingView · by RxchOffplayz",
     },
     en: {
       "nav-formations": "Courses",
@@ -1552,7 +1629,7 @@
       "form-h2":        "Two levels. <em>One path.</em>",
       "form-sub":       "Start with solid foundations, then level up with advanced institutional concepts.",
       "form1-title":    "Price Action &<br/>Market Structure",
-      "form1-sub":      "Forex \u00b7 Indices \u00b7 Crypto \u00b7 XAU/USD",
+      "form1-sub":      "Forex \u00b7 Indicators \u00b7 Crypto \u00b7 XAU/USD",
       "form1-prereq":   "No prerequisites",
       "form1-btn":      "Access the course",
       "form2-title":    "Smart Money Concepts<br/>& Pro Execution",
@@ -1564,10 +1641,12 @@
       "bundle-btn":     "Get the Bundle",
       "learn-tag":      "The curriculum",
       "learn-h2":       "What you will <em>truly</em> master",
+      "stats-tag":      "By the numbers",
+      "stats-h2":       "The <em>results</em> speak",
       "tab-beg":        "Beginner Course",
       "tab-adv":        "Advanced Course",
       "about-tag":      "The instructor",
-      "about-desc":     "Active trader on Forex, indices and crypto. My method is based on direct chart reading \u2014 pure price action, institutional concepts and rigorous risk management.",
+      "about-desc":     "Active trader on Forex, indicators and crypto. My method is based on direct chart reading \u2014 pure price action, institutional concepts and rigorous risk management.",
       "proof-tag":      "Testimonials",
       "proof-h2":       "What they <em>say</em>",
       "faq-tag":        "FAQ",
@@ -1575,7 +1654,7 @@
       "faq1-q":         "Which course should I start with?",
       "faq1-a":         "If you are new or your foundations are not solid, start with the Beginner Course. It is the mandatory prerequisite for the Advanced Course.",
       "faq2-q":         "Which markets do these courses apply to?",
-      "faq2-a":         "The method is universal: Forex, Indices (NAS100, SP500), Crypto (Bitcoin, altcoins) and Gold (XAUUSD).",
+      "faq2-a":         "The method is universal: Forex, Indicators (NAS100, SP500), Crypto (Bitcoin, altcoins) and Gold (XAUUSD).",
       "faq3-q":         "Is a minimum capital required to start?",
       "faq3-a":         "No. The courses include paper trading exercises. It is recommended to practice in simulation before trading with real capital.",
       "faq4-q":         "What platform is recommended?",
@@ -1633,7 +1712,14 @@
       // Perfs
       "perfs-tag":  "Recent results",
       "perfs-h2":   "Some <em>closed trades</em>",
-      "perfs-sub":  "Real setup examples on markets covered in the courses."
+      "perfs-sub":  "Real setup examples on markets covered in the courses.",
+      "toolkit-tag":        "The tools",
+      "toolkit-h2":         "AZARUS <em>Toolkit</em>",
+      "toolkit-sub":        "4 exclusive TradingView indicators designed to apply the AZARUS method directly on your charts.",
+      "toolkit-pack-label": "Full pack · 4 TradingView indicators",
+      "toolkit-pack-note":  "Lifetime access · Updates included · Discord support",
+      "toolkit-btn":        "Get the Toolkit",
+      "toolkit-platform":   "TradingView exclusive · by RxchOffplayz",
     }
   };
     let currentLang = 'fr';
@@ -1682,6 +1768,8 @@
     // Learn tabs
     { key:'learn-tag', sel:'#learn .section-tag' },
     { key:'learn-h2',  sel:'#learn h2', html:true },
+    { key:'stats-tag', sel:'#stats-tag', html:false },
+    { key:'stats-h2',  sel:'#stats h2', html:true },
     { key:'tab-beg', sel:'.learn-tab:nth-child(1)' },
     { key:'tab-adv', sel:'.learn-tab:nth-child(2)' },
     // About
@@ -1738,6 +1826,14 @@
     // Perfs
     { key:'perfs-tag', sel:'#perfs-tag' },
     { key:'perfs-h2',  sel:'#perfs-h2', html:true },
+    // Toolkit
+    { key:'toolkit-tag',        sel:'#toolkit-tag' },
+    { key:'toolkit-h2',         sel:'#toolkit-h2', html:true },
+    { key:'toolkit-sub',        sel:'#toolkit-sub' },
+    { key:'toolkit-pack-label', sel:'#toolkit-pack-label' },
+    { key:'toolkit-pack-note',  sel:'#toolkit-pack-note' },
+    { key:'toolkit-btn',        sel:'#toolkit-btn' },
+    { key:'toolkit-platform',   sel:'#toolkit-platform' },
     // CTA
     { key:'cta-tag',  sel:'#cta .section-tag' },
     { key:'cta-h2',   sel:'#cta h2', html:true },
@@ -1782,9 +1878,8 @@
     });
     // Translate module texts
     document.querySelectorAll('.mod-text').forEach(el => {
-      const val = t[el.dataset.fr] || el.dataset[currentLang];
-      if(val) el.textContent = val;
-      else el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.fr;
+      const val = currentLang === 'en' ? el.dataset.en : el.dataset.fr;
+      if(val) el.innerHTML = val;
     });
 
     // Update html lang attr
